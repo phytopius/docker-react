@@ -1,9 +1,10 @@
 sudo: required
+
 services:
   - docker
 
 before_install:
   - docker build -t phytopius/docker-react -f Dockerfile.dev .
 
-scripts:
-  - docker run phytopius/docker-react npm run test -- --coverage
+script:
+  - docker run phytopius/docker-react nüm run test -- --coverage
